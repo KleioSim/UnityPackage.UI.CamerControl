@@ -12,6 +12,11 @@
     "email": "simon.s.fong@outlook.com"
   },
   "samples": [
+    {
+      "displayName": "Samples",
+      "description": "Samples",
+      "path": "Samples"
+    }
   ],
   "dependencies": {
   }
