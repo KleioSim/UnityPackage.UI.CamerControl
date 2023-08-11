@@ -1,0 +1,18 @@
+{
+  "name": "com.kleiosim.ui.cameracontrol",
+  "version": "0.1.0",
+  "displayName": "Camera Control",
+  "description": "",
+  "unity": "2022.1",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "keywords": [],
+  "author": {
+    "name": "Simon.S.Fong",
+    "email": "simon.s.fong@outlook.com"
+  },
+  "samples": [
+  ],
+  "dependencies": {
+  }
+}

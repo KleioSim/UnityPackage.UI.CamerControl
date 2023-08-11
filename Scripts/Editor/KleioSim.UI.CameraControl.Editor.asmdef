@@ -1,0 +1,17 @@
+{
+    "name": "KleioSim.UI.CameraControl.Editor",
+    "rootNamespace": "KleioSim.UI",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [
+    ],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
