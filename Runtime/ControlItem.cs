@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace KleioSim.UI
+namespace KleioSim.UI.CameraControl
 {
     public class ControlItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {

@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace KleioSim.UI
+namespace KleioSim.UI.CameraControl
 {
     public static class CameraControlResigter
     {

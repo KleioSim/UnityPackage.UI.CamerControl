@@ -1,6 +1,6 @@
 {
-    "name": "KleioSim.UI.CameraControl",
-    "rootNamespace": "KleioSim.UI.CameraControl",
+    "name": "KleioSim.UI.CameraControl.Samples",
+    "rootNamespace": "KleioSim.UI.CameraControl.Samples",
     "references": [],
     "includePlatforms": [
     ],

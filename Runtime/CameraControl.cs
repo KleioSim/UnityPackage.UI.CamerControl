@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 
-namespace KleioSim.UI
+namespace KleioSim.UI.CameraControl
 {
     public class CameraControl : MonoBehaviour
     {
         public Camera TargetCamera;
+
+        public UnityEvent<Vector3> OnCameraMove;
+        public UnityEvent<float> OnCameraUpdown;
 
         void Update()
         {
@@ -14,6 +18,8 @@ namespace KleioSim.UI
                 var move = (pos - new Vector2(0.5f, 0.5f)) * 0.1f;
 
                 TargetCamera.transform.position += (Vector3)move;
+
+                OnCameraMove?.Invoke(move);
             }
 
             var mouseScrollWheel = Input.GetAxis("Mouse ScrollWheel");
@@ -29,12 +35,11 @@ namespace KleioSim.UI
 
         private void OnScrollWheel(bool flag)
         {
-            var newSize = TargetCamera.orthographicSize + 0.25f * (flag ? 1 : -1);
+            var changed = 0.25f * (flag ? 1 : -1);
 
-            //newSize = Mathf.Min(newSize, maxOrthoSize);
-            //newSize = Mathf.Max(newSize, minOrthoSize);
+            TargetCamera.orthographicSize += changed;
 
-            TargetCamera.orthographicSize = newSize;
+            OnCameraUpdown?.Invoke(changed);
         }
     }
 
