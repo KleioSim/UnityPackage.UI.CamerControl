@@ -7,6 +7,9 @@ namespace KleioSim.UI.CameraControl
     {
         public Camera TargetCamera;
 
+        public float maxOrthographicSize;
+        public float minOrthographicSize;
+
         public UnityEvent<Vector3> OnCameraMove;
         public UnityEvent<float> OnCameraUpdown;
 
@@ -37,7 +40,9 @@ namespace KleioSim.UI.CameraControl
         {
             var changed = 0.25f * (flag ? 1 : -1);
 
-            TargetCamera.orthographicSize += changed;
+            var orthographicSize = Mathf.Min(maxOrthographicSize, Mathf.Max(minOrthographicSize, TargetCamera.orthographicSize + changed));
+
+            TargetCamera.orthographicSize = orthographicSize;
 
             OnCameraUpdown?.Invoke(changed);
         }
